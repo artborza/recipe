@@ -10,14 +10,12 @@ import { ProductListComponent } from './catalog/product-list/product-list.compon
 export class AppComponent {
   title = 'recipe';
 
-  constructor(private backendService:BackendService){
+  // constructor(private backendService:BackendService){}
 
-  }
-
-  @ViewChild(`productList`)
-  productList: ProductListComponent
+  // @ViewChild(`productList`)
+  // productList: ProductListComponent
 
   ngOnInit():void{
-    this.productList.products = this.backendService.getProducts();
+    // this.productList.products = this.backendService.getProducts();
   }
 }

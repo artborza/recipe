@@ -6,6 +6,21 @@ import { AppComponent } from './app.component';
 import { BackendService } from './backend.service';
 import { CatalogModule } from './catalog/catalog.module';
 import { HomeModule } from './home/home.module';
+import {RouterModule,Routes} from '@angular/router';
+import { MainContentComponentComponent } from './home/main-content-component/main-content-component.component';
+import { NavBarComponentComponent } from './home/nav-bar-component/nav-bar-component.component';
+
+const routes:Routes =[
+  {
+    path:'main',
+    component:MainContentComponentComponent
+  },
+  {
+    path:'nav',
+    component:NavBarComponentComponent
+  }
+
+]
 
 @NgModule({
   declarations: [
@@ -15,7 +30,7 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AppRoutingModule,
     CatalogModule,
-    HomeModule
+    HomeModule, RouterModule.forRoot(routes)
   ],
   providers: [BackendService],
   bootstrap: [AppComponent]

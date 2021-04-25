@@ -1,4 +1,5 @@
 import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { BackendService } from 'src/app/backend.service';
 import { Product } from '../../models/product';
 import { ProductItemComponent } from '../product-item/product-item.component';
 
@@ -12,7 +13,7 @@ export class ProductListComponent implements OnInit {
   productItems:QueryList<ProductItemComponent>
 
   products:Product[]
-  constructor() { 
+  constructor(privatebackendService: BackendService) { 
     this.products =[];
     this.products.push({
       name:'ส้มโอ',
@@ -27,6 +28,7 @@ export class ProductListComponent implements OnInit {
       price:50
     })
   }
+
 
   ngOnInit(): void {}
   selectProduct(productComponent:ProductItemComponent){
