@@ -9,6 +9,9 @@ import { HomeModule } from './home/home.module';
 import {RouterModule,Routes} from '@angular/router';
 import { MainContentComponentComponent } from './home/main-content-component/main-content-component.component';
 import { NavBarComponentComponent } from './home/nav-bar-component/nav-bar-component.component';
+import { BrowserAnimationsModule } from'@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+
 
 const routes:Routes =[
   {
@@ -30,6 +33,8 @@ const routes:Routes =[
     BrowserModule,
     AppRoutingModule,
     CatalogModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
     HomeModule, RouterModule.forRoot(routes)
   ],
   providers: [BackendService],
